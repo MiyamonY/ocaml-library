@@ -1,0 +1,24 @@
+* Ocaml Library
+  Show package files on Emacs.
+
+** Requirements
+   ocamlfind
+
+** How to use
+   Download this files and add load-path. Append `(requrie 'ocaml-library)` to
+   .emacs. Then, M-x `ocaml-library-browse`.
+
+** Cutomize
+   - Set packge list you want to show to variable _ocaml-library-packages_.
+
+     Example:
+     #+BEGIN_SRC emacs-lisp
+     (setq ocaml-library-packages '("core" "stdlib"))
+     #+END_SRC
+
+   - Bind function _ocaml-library-browse_ to any keys.
+
+     Example:
+     #+BEGIN_SRC emacs-lisp
+     (define-key 'tuareg-mode-map (kbd "C-:") 'ocaml-library-browse)
+     #+END_SRC
